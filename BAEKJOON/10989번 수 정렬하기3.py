@@ -7,24 +7,18 @@
 # for i in num:
 #     print(i)
 
-# import sys
 
-# # for i in sys.stdin.readline():
-# #     print(i)
 
-# for i in sys.stdin:
-#     print(i)
+import sys 
 
-import sys
+n=int(sys.stdin.readline())  #첫째 줄 n개가 주어짐
+num=[0]*10001                #입력 수들이 10,000이하/ 0부터 시작하는 리스트는 10,001개를 만들어야 함
+for _ in range(n):
+    test=int(sys.stdin.readline())   #입력 수들을 정수로 받고
+    num[test]+=1                     #입력된 정수의 리스트 자리에는 하나씩 카운트하여 나온 횟수 체크
 
-n = int(sys.stdin.readline())
-lists = [0] * 11
-for i in range(n):
-    lists[int(sys.stdin.readline())] += 1	
-    # 0으로 된 리스트의 인덱스를 입력 받고 해당 숫자가 존재하면 1을 더하는 방식. 
-    #2이면 두 번 출력하도록 아래에서 진행
-    
-for i in range(10001):
-    if lists[i] != 0:	# 우선 0이면 해당 숫자가 없는 것 이므로
-        for j in range(lists[i]):	# 있으면 해당 숫자만큼
-            print(i)	# 출력
+#이제 리스트에서 하나씩 꺼내서 출력
+for i in range(10001):               #리스트가 (0~10,000) 10,001번 반복해서 빼오면
+    if num[i] !=0:                   #0인 경우엔 없으니 출력할 필요없고, 0이 아닌 경우만 출력
+        for _ in range(num[i]):      #카운트 횟수인 리스트 각 자리만큼 반복 
+            print(i)               
