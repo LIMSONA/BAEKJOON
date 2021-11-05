@@ -5,3 +5,4 @@
 하루 1문제이상씩 풀면서 배우기 
 
 * 업로드 시작: 21.11.03.수 ~
+* 티스토리: https://coding-nurse.tistory.com/
