@@ -24,8 +24,8 @@ def bfs(x,y):
                 continue    #for문으로
             if graph[nx][ny]==0: #괴물이 있는 곳
                 continue    #for문으로
-            if graph[nx][ny]==1: #괴물이 없는 곳
-                graph[nx][ny] = graph[x][y] + 1 #해당 노드를 처음 방문하는 곳에 도착하는 경우 이동거리를 표시하기위해 1 더하기
+            if graph[nx][ny]==1: #괴물 없고, 처음 방문하는 곳
+                graph[nx][ny] = graph[x][y] + 1 #이동거리를 표시하기위해 1 더하기
                 que.append((nx,ny)) # 그 다음 이동을 위해 que에 집어 넣기
     return graph[n-1][m-1]  #가장 오른쪽 아래까지 도착했을때 더했던 값을 반환
     #n-1 m-1로 표기한 이유는, n과m은 자연수여서 1부터 시작 (1,2,3....)
