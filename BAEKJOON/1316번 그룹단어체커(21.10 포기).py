@@ -7,24 +7,25 @@
 
 # 2. 연속x 
 # 이후로 자기가 포함되어 있는지
-
-
-
 # A. 그룹단어를 출력하시오
 
-# n=int(input())
+#1차시도 실패-----------------------
 
-# for _ in range(n):
-#     t=list(input())
-#     for i in range(len(t)):
-#         if t[i]!=t[i+1]:
-#             if t[i] in t[i+1:]:
-#                print("그룹단어 아님")
+n=int(input())
+
+for _ in range(n):
+    t=list(input())
+    for i in range(len(t)):
+        if t[i]!=t[i+1]:
+            if t[i] in t[i+1:]:
+               print("그룹단어 아님")
             
-#         else:
-#                 print("그룹단어임")
-#                 pass
+        else:
+                print("그룹단어임")
+                pass
 
+
+#2차시도 실패--------------
 
 n=int(input())
 for _ in range(n):
@@ -38,4 +39,3 @@ for _ in range(n):
                 n-=1
         break
     print(n)
-        
