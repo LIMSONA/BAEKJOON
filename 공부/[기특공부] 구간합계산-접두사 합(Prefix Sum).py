@@ -6,7 +6,7 @@ data = list(map(int,input().split()))   #데이터 열
 
 sum_value = 0
 # [1]부터 append해야하니 [0]자리에 미리 0을 삽입하는 리스트
-prefix_sum = [0]    
+prefix_sum = [0]        
 
 #합계값 리스트에 넣는 반복문
 for i in data:
