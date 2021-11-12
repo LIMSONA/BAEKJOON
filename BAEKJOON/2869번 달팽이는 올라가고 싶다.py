@@ -12,7 +12,6 @@ for i in range(1,sys.maxsize):
         print(i+1)
         break
 
-
 #2차시도(성공)------------------------
 a,b,v=map(int,input().split())
 
