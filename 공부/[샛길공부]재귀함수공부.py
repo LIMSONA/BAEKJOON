@@ -1,3 +1,5 @@
+import sys
+
 def sona(x):
 	if x==6:
 		return
