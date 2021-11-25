@@ -9,4 +9,4 @@ this_weekend=list(combinations(to_do_list,3))
 
 # 집중할 3개 출력하기!
 for focus in this_weekend:
-    print(focus)
+    print(focus) 
