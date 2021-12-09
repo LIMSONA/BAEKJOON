@@ -13,17 +13,28 @@ fpath=r'C:\Users\akmris00\Downloads\코로나바이러스감염증-19_확진환�
 wb = openpyxl.load_workbook(fpath)
 ws = wb.active
 
-# 2021.11.04 국내발생(C661셀) 2021.12.08 국내발생(C695셀)
-weeks= []
-for i in range(1,7):
-    days=ws.cell(row=661+i,column=3).value
-    weeks.append(days)
-    
+# 2021.11.04 국내발생(C661셀) 2021.12.08 국내발생(C695셀) 5주동안
+
+#각 주별로 발생인원을 sum 해줘야함
+weeks=[[] for _ in range(5)]
+cnt=0
+start=661
+for _ in range(5):
+    for i in range(0,7):
+        days=ws.cell(row=start+i,column=3).value
+        weeks[cnt].append(days)
+    cnt+=1   
+    start+=7
+        
+for j in range(0,5):
+    weeks[j]=sum(weeks[j])
+
+       
 x=[]
 y=[]    
-for i in range(0,6):    
-    x.append(str(i)+'주후')
-    y.append(weeks[i])
+for k in range(0,5):    
+    x.append(str(k)+'주후')
+    y.append(weeks[k])
 
 plt.plot(x,y,color='#ff8e7f',linestyle='--',linewidth=3,marker='o')
 plt.title('도대체 얼마나 코로나 발생이 늘어났길래-!')
