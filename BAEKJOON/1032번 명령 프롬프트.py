@@ -1,14 +1,36 @@
+#==============성공!
 t=int(input())
-a=[]
-for i in range(t):
-    file = input()
-    a.append(file)
+ 
+before = list(input())
+for i in range(t-1):
+    after = list(input())
+    for j in range(len(before)):
+        if before[j] != after[j]: before[j]="?"
+print("".join(before))
+
+#===============실패!
+# t=int(input())
+# if t==1: print(input())
+# else:
+#     a=[]
+#     for i in range(t):
+#         file = input()
+#         a.append(file)
     
-result=''
-for i in range(len(a[0])):
-    if a[0][i]==a[1][i]==a[2][i]: 
-        result=result+(a[0][i])
-    else:
-        result=result+"?"
+#     cnt=0
+#     sentence="a[0][i]"
+#     for i in range(t-1):
+#         sentence+="=="
+#         cnt+=1
+#         sentence+="a["+str(cnt)+"][i]"
+#     print(sentence)    
         
-print(result)
+#     result=""    
+#     for i in range(len(a[0])):
+#         #0부터 len(n)-1까지 일치하는지
+#         if sentence: 
+#             result=result+(a[0][i])
+#         else:
+#             result=result+"?"
+            
+#     print(result)
